@@ -14,7 +14,7 @@ public class Parqueadero {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int a;// TODO code application logic here
+        // TODO code application logic here
     }
     
 }
