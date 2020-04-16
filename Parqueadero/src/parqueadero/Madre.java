@@ -51,5 +51,38 @@ public class Madre {
       }
   }  
   }
+ 
   
+   public static ArrayList <Madre> carross = new ArrayList <Madre> ();
+  public ArrayList<Madre> llena(int a, String b, int c, int d){
+      Madre carrosss = new Madre();
+      carrosss.numplaca=a;
+      carrosss.nomUsuario=b;
+      carrosss.idUsuario=c;
+      carrosss.horaEntrada=d;
+      carross.add(carrosss);
+      return carross;
+     
+    }
+  
+  public void impri (int placa){
+      for(int i=0;i<8;i++){
+          if(carross.get(i).numplaca==placa){
+      System.out.println("Numero de placa: "+carross.get(i).numplaca+"   Hora de entrada: "+carross.get(i).horaEntrada+"    Identificacion del usuario: "+carross.get(i).idUsuario+"   Nombre del usuario: "+carross.get(i).nomUsuario);
+        }
+    }
+     
+  }
+  public Integer tama (){
+      int tama=0;
+      tama = carross.size();
+      return tama;
+  }
+  public void elimi(int placa){
+      for(int i=0;i<8;i++){
+          if(carross.get(i).numplaca==placa){
+      carross.remove(i);
+      }
+  }  
+  }
 }

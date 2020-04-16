@@ -15,7 +15,7 @@ public class Parqueadero {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       new Ingreso().setVisible(true);
+       new Parqueaderoo().setVisible(true);
     }
     
 }

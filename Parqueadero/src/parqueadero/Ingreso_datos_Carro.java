@@ -5,6 +5,8 @@
  */
 package parqueadero;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Nicole
@@ -64,8 +66,18 @@ public class Ingreso_datos_Carro extends javax.swing.JFrame {
         });
 
         jButton1.setText("ACEPTAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("VOLVER");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -142,6 +154,22 @@ public class Ingreso_datos_Carro extends javax.swing.JFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+         // TODO add your handling code here:
+        if(jTextField1.getText().equals("")|| jTextField2.getText().equals("") ||jTextField3.getText().equals("")||jTextField4.getText().equals("") ){
+            JOptionPane.showMessageDialog(null, "Existen campos vacios", "Warning", JOptionPane.WARNING_MESSAGE);
+        }else{
+      Madre envio = new Madre();
+      envio.llenado(Integer.parseInt(jTextField1.getText()),jTextField2.getText(),Integer.parseInt(jTextField3.getText()),Integer.parseInt(jTextField4.getText()));
+      dispose();
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
