@@ -5,6 +5,8 @@
  */
 package parqueadero;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Nicole
@@ -44,16 +46,36 @@ public class Ingreso extends javax.swing.JFrame {
         BICI.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Bicicleta.PNG"))); // NOI18N
 
         jButton3.setText("VOLVER");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Carro.PNG"))); // NOI18N
 
         pita.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/pita.png"))); // NOI18N
 
         jButton1.setText("BICICLETA");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("CARRO");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("MOTO");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -82,7 +104,7 @@ public class Ingreso extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(120, 120, 120)
                         .addComponent(jLabel1)))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,6 +128,37 @@ public class Ingreso extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Ingreso_datos_Bicicleta Ventana1 = new Ingreso_datos_Bicicleta();
+        Ventana1.setVisible(true);
+                
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Ingreso_datos_Carro Ventana2 = new Ingreso_datos_Carro();
+        Ventana2.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        Madre validacion = new Madre();
+        int tamano=0;
+        tamano= validacion.tamaño();
+        if(tamano<3){
+        Ingreso_datos_Moto Ventana3 = new Ingreso_datos_Moto();
+        Ventana3.setVisible(true);}
+        else{
+            JOptionPane.showMessageDialog(null, "Los cupos están llenos", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+       dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
