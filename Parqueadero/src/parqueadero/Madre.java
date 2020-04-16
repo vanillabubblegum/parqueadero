@@ -32,13 +32,24 @@ public class Madre {
       return motoss;
      
     }
-  public void imprimir (){
-      System.out.println(motoss.get(0).numplaca);
+  public void imprimir (int placa){
+      for(int i=0;i<8;i++){
+          if(motoss.get(i).numplaca==placa){
+      System.out.println("Numero de placa: "+motoss.get(i).numplaca+"   Hora de entrada: "+motoss.get(i).horaEntrada+"    Identificacion del usuario: "+motoss.get(i).idUsuario+"   Nombre del usuario: "+motoss.get(i).nomUsuario);
+      }
+  }  
   }
   public Integer tamaño (){
       int tamaño=0;
       tamaño = motoss.size();
       return tamaño;
   }
-    
+  public void eliminar(int placa){
+      for(int i=0;i<8;i++){
+          if(motoss.get(i).numplaca==placa){
+      motoss.remove(i);
+      }
+  }  
+  }
+  
 }
