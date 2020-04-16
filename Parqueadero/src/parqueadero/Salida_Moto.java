@@ -129,6 +129,9 @@ public class Salida_Moto extends javax.swing.JFrame {
         price = (Integer.parseInt(txt6.getText())-entrada)*0.60*20;
         System.out.println("el precio es: "+price);
         System.out.println("Hora de salida: "+Integer.parseInt(txt6.getText()));
+        remover.recolectarPrecio( price);
+        remover.eliminar(Integer.parseInt(txt5.getText()));
+       
         //remover.imprimir(Integer.parseInt(txt5.getText()));
        
         
@@ -181,4 +184,8 @@ public class Salida_Moto extends javax.swing.JFrame {
     private javax.swing.JTextField txt5;
     private javax.swing.JTextField txt6;
     // End of variables declaration//GEN-END:variables
+
+    private void getText() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

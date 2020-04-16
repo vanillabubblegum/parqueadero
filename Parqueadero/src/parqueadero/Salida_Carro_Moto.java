@@ -127,6 +127,8 @@ Madre remover = new Madre();
         price = (Integer.parseInt(ta2.getText())-entrada)*0.60*75;
         System.out.println("el precio es: "+price);
         System.out.println("Hora de salida: "+Integer.parseInt(ta2.getText()));
+        remover.recolectarPrecio(price);
+        remover.eliminar(Integer.parseInt(ta1.getText()));
       // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 

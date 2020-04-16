@@ -125,6 +125,8 @@ dispose();        // TODO add your handling code here:
         price = (Integer.parseInt(t2.getText())-entrada)*0.60*10;
         System.out.println("el precio es: "+price);
         System.out.println("Hora de salida: "+Integer.parseInt(t2.getText()));
+        remover.recolectarPrecio( price);
+        remover.eliminar(Integer.parseInt(t1.getText()));
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 

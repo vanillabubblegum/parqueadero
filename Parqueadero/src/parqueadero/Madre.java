@@ -118,6 +118,10 @@ public class Madre {
       }
   }  
   }
+  public void recolectarPrecio (double pr){
+      double preciooo;
+      preciooo = pr;
+  }
 
     void llenado(int parseInt) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates. hice lo de arriba
