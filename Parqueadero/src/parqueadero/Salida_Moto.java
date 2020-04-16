@@ -42,6 +42,12 @@ public class Salida_Moto extends javax.swing.JFrame {
 
         jLabel2.setText("HORA DE SALIDA");
 
+        txt6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt6ActionPerformed(evt);
+            }
+        });
+
         jButton1.setText("VOLVER");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,9 +120,23 @@ public class Salida_Moto extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
      
         // TODO add your handling code here:
-        //Madre remover = new Madre();
+        //pera
+        Madre remover = new Madre();
+        
+        double entrada;
+        entrada = remover.horaEntrada;
+        double price;
+        price = (Integer.parseInt(txt6.getText())-entrada)*0.60*20;
+        System.out.println("el precio es: "+price);
+        System.out.println("Hora de salida: "+Integer.parseInt(txt6.getText()));
+        //remover.imprimir(Integer.parseInt(txt5.getText()));
        
+        
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txt6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt6ActionPerformed
 
     /**
      * @param args the command line arguments

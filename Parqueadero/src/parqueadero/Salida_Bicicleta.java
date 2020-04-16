@@ -42,6 +42,12 @@ public class Salida_Bicicleta extends javax.swing.JFrame {
 
         jLabel2.setText("HORA DE SALIDA");
 
+        t2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                t2ActionPerformed(evt);
+            }
+        });
+
         jButton1.setText("ACEPTAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,14 +111,26 @@ dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-if(t1.getText().equals("")|| t2.getText().equals("")){
+/*if(t1.getText().equals("")|| t2.getText().equals("")){
             JOptionPane.showMessageDialog(null, "Existen campos vacios", "Warning", JOptionPane.WARNING_MESSAGE);
         }else{
       Madre envio = new Madre();
       envio.llenado(Integer.parseInt(t1.getText()), t2.getText());
-      dispose(); 
-}// TODO add your handling code here:
+      dispose(); */
+      Madre remover = new Madre();
+        
+        double entrada;
+        entrada = remover.horaEntrada;
+        double price;
+        price = (Integer.parseInt(t2.getText())-entrada)*0.60*10;
+        System.out.println("el precio es: "+price);
+        System.out.println("Hora de salida: "+Integer.parseInt(t2.getText()));
+// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void t2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_t2ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -120,7 +120,7 @@ public class Madre {
   }
 
     void llenado(int parseInt) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates. hice lo de arriba
     }
 
     void llenado(int parseInt, String text) {
